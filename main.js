@@ -63,7 +63,6 @@ function getPage(num) {
     }
     for(var i = maxDisplay * num; i < listLength; i++){
         listItem[i].style.display = "none";
-        console.log(i);
     }   
     for(var i = 0; i < (maxDisplay * num) - maxDisplay; i++){
         listItem[i].style.display = "none";
