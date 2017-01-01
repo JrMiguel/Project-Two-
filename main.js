@@ -3,8 +3,11 @@ var maxDisplay = 10; //List items per page
 var selectedNum = 1; //Pagination # selected, initiated at one
 
 //Search variables 
-var userInput = document.getElementById("search");
-var searchButton = document.getElementsByTagName("button")[0];
+var userInput = document.createElement("input");
+    userInput.type = "text"; 
+    userInput.placeholder = "Search for students";
+var searchButton = document.createElement("button");
+    searchButton.innerText = "Search";
 var staffName = document.getElementsByClassName("student-details"); 
 
 //Staff list variables
@@ -17,6 +20,10 @@ var ulPagination = document.getElementById("pagination");
 
 //Create and append pagination tabs based on numberOfTabs (listLength / maxDisplay)
 function create() {
+    //append search input and button
+    var searchInput = document.getElementsByClassName("student-search")[0]; 
+    searchInput.appendChild(userInput);
+    searchInput.appendChild(searchButton);
     for (var i = 1; i <= numberOfTabs; i++ ) {
         //Create list and anchor elements
         var liPagination = document.createElement("li");
