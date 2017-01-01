@@ -108,4 +108,3 @@ function searchStaff() {
 searchButton.onclick = searchStaff;
 create();
 
-//Add get index number with previousSibling http://stackoverflow.com/questions/5913927/get-child-node-index
